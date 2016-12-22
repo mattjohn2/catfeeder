@@ -12,7 +12,7 @@ def update_progress(progress):
     if progress >= 1:
         progress = 1
     block = int(round(barLength*progress))
-    text = "\rFeeding: [{0}] {1}%".format( "#"*block + "-"*(barLength-block), progress*100)
+    text = "\rFeeding: [{0}] {1:.1f}%".format( "#"*block + "-"*(barLength-block), progress*100)
     sys.stdout.write(text)
     sys.stdout.flush()
 
